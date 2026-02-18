@@ -4,9 +4,11 @@
   <div class="relative border-b border-white/20">
     <a class="flex items-center gap-4 py-6 px-8" href="#/">
       <h6
-        class="block antialiased tracking-normal font-sans text-base font-semibold leading-relaxed text-white"
+        class="text-2xl font-bold block antialiased tracking-normal font-sans leading-relaxed text-white"
       >
-        Material Tailwind Dashboard
+        <!-- TODO: Customize colors-->
+        <span class="text-blue-500">Neme</span>
+        <span class="font-thin">K</span>
       </h6>
     </a>
     <button
@@ -31,9 +33,13 @@
   <div class="m-4">
     <ul class="mb-4 flex flex-col gap-1">
       <li>
-        <a aria-current="page" class="active" href="#">
+        <a
+          routerLink="/"
+          routerLinkActive="rounded-lg bg-linear-to-tr from-blue-600 to-blue-400 text-white shadow-md shadow-blue-500/20 hover:shadow-lg hover:shadow-blue-500/40 active:opacity-[0.85] w-full flex items-center"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
           <button
-            class="middle none font-sans font-bold center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg bg-linear-to-tr from-blue-600 to-blue-400 text-white shadow-md shadow-blue-500/20 hover:shadow-lg hover:shadow-blue-500/40 active:opacity-[0.85] w-full flex items-center gap-4 px-4 capitalize"
+            class="middle none font-sans font-bold center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white hover:bg-white/10 active:bg-white/30 w-full flex items-center gap-4 px-4"
             type="button"
           >
             <svg
@@ -86,7 +92,11 @@
         </a>
       </li>
       <li>
-        <a class="" href="#">
+        <a
+          routerLink="/projects"
+          routerLinkActive="rounded-lg bg-linear-to-tr from-blue-600 to-blue-400 text-white shadow-md shadow-blue-500/20 hover:shadow-lg hover:shadow-blue-500/40 active:opacity-[0.85] w-full flex items-center"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
           <button
             class="middle none font-sans font-bold center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white hover:bg-white/10 active:bg-white/30 w-full flex items-center gap-4 px-4 capitalize"
             type="button"
@@ -107,7 +117,7 @@
             <p
               class="block antialiased font-sans text-base leading-relaxed text-inherit font-medium capitalize"
             >
-              tables
+              Projects
             </p>
           </button>
         </a>
