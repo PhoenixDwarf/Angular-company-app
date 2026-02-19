@@ -1,9 +1,21 @@
 <!-- component -->
 <div class="min-h-screen bg-gray-50/50">
-  <app-side-menu
+  <!-- <app-side-menu
     [authenticated]="authenticated()"
     (login)="handleLogin()"
     (logout)="handleLogout()"
+  /> -->
+
+  <!--
+    Purple color might not work since this app does not use that class anywhere and only the dependency is using it.
+    Therefore, tailwind will not add it to the generated css file.
+    May need to fix this
+  -->
+  <lib-nemeq-side-menu
+    [authenticated]="authenticated()"
+    (login)="handleLogin()"
+    (logout)="handleLogout()"
+    [titleColor]="titleColor.blue"
   />
 
   <div class="p-4 xl:ml-80">

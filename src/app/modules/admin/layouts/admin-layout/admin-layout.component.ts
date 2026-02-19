@@ -1,14 +1,15 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { SideMenuComponent } from '../../../shared/components/side-menu/side-menu.component';
+import { NemeqSideMenu, TitleColor } from 'nemeq-side-menu';
 
 @Component({
   selector: 'app-admin-layout',
-  imports: [RouterOutlet, SideMenuComponent],
+  imports: [RouterOutlet, NemeqSideMenu],
   templateUrl: './admin-layout.component.html',
 })
 export default class AdminLayoutComponent {
   authenticated = signal(false);
+  titleColor = TitleColor;
 
   handleLogin() {
     this.authenticated.set(true);
